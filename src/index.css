@@ -1,0 +1,410 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  color: white;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* =========================
+   GENERAL PAGE
+========================= */
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 60px;
+  border-radius: 20px;
+  background: #111827;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.welcome-text {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #cbd5e1;
+}
+
+.home-card h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.home-card h1 span {
+  color: #8b5cf6;
+}
+
+.description {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  padding: 13px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.primary-btn {
+  background: linear-gradient(
+    90deg,
+    #9333ea,
+    #2563eb
+  );
+  color: white;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.primary-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+  transform: none;
+}
+
+.secondary-btn {
+  background: #334155;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: #475569;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-container {
+  width: 100%;
+  max-width: 750px;
+}
+
+.quiz-header {
+  margin-bottom: 25px;
+}
+
+.quiz-header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.quiz-header p {
+  color: #94a3b8;
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-section {
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #334155;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #9333ea,
+    #2563eb
+  );
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   QUESTION CARD
+========================= */
+
+.question-card {
+  background: #111827;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.question-number {
+  color: #8b5cf6;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.question-card h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answers-container {
+  display: grid;
+  gap: 12px;
+}
+
+.answer-option {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #334155;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.answer-option:hover:not(:disabled) {
+  border-color: #8b5cf6;
+  transform: translateX(4px);
+}
+
+.answer-option.selected {
+  background: #4c1d95;
+  border-color: #a855f7;
+}
+
+.answer-option.correct {
+  background: #14532d;
+  border-color: #22c55e;
+}
+
+.answer-option.incorrect {
+  background: #7f1d1d;
+  border-color: #ef4444;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 7px;
+  background: #1e293b;
+}
+
+.correct-message {
+  color: #4ade80;
+}
+
+.incorrect-message {
+  color: #f87171;
+}
+
+.quiz-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* =========================
+   RESULT PAGE
+========================= */
+
+.result-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.result-card {
+  background: #111827;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.completed-text {
+  color: #8b5cf6;
+  margin-bottom: 10px;
+}
+
+.result-card h1 {
+  margin-bottom: 20px;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #2563eb
+  );
+}
+
+.score-circle span {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.score-circle small {
+  font-size: 25px;
+}
+
+.result-message {
+  margin: 10px 0 25px;
+  color: #cbd5e1;
+}
+
+.result-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.stat-box {
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+
+.stat-box span {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.stat-box strong {
+  font-size: 22px;
+}
+
+.correct-stat strong {
+  color: #4ade80;
+}
+
+.incorrect-stat strong {
+  color: #f87171;
+}
+
+/* =========================
+   ANSWER REVIEW
+========================= */
+
+.review-title {
+  margin: 30px 0 15px;
+}
+
+.answer-review {
+  display: grid;
+  gap: 12px;
+}
+
+.review-item {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #64748b;
+}
+
+.review-item h3 {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.review-item p {
+  margin-top: 6px;
+  color: #cbd5e1;
+}
+
+.review-correct {
+  border-left-color: #22c55e;
+}
+
+.review-incorrect {
+  border-left-color: #ef4444;
+}
+
+.result-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 650px) {
+  .home-card {
+    padding: 35px 25px;
+  }
+
+  .home-card h1 {
+    font-size: 36px;
+  }
+
+  .question-card {
+    padding: 25px 20px;
+  }
+
+  .result-statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .result-buttons {
+    flex-direction: column;
+  }
+
+  .result-buttons button {
+    width: 100%;
+  }
+}
